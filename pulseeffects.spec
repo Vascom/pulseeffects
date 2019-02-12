@@ -31,7 +31,7 @@ BuildRequires:  zita-convolver-devel >= 3.1.0
 
 Requires:       hicolor-icon-theme
 Requires:       gstreamer1-plugins-good >= 1.12
-Requires:       ladspa-swh-plugins >= 0.4
+#Requires:       ladspa-swh-plugins >= 0.4
 Requires:       lv2-calf-plugins >= 0.90.0
 
 Recommends:     zam-plugins
