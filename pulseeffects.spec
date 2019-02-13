@@ -18,8 +18,8 @@ BuildRequires:  pkgconfig(fftw3)
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(gtkmm-3.0)
 BuildRequires:  pkgconfig(glibmm-2.4) >= 2.56
-BuildRequires:  pkgconfig(gstreamer-1.0) >= 1.12
-BuildRequires:  pkgconfig(gstreamer-plugins-bad-1.0) >= 1.12
+BuildRequires:  pkgconfig(gstreamer-1.0) >= 1.12.5
+BuildRequires:  pkgconfig(gstreamer-plugins-bad-1.0) >= 1.12.5
 BuildRequires:  pkgconfig(libbs2b)
 BuildRequires:  pkgconfig(libebur128)
 BuildRequires:  pkgconfig(libpulse) >= 11.0
@@ -30,14 +30,16 @@ BuildRequires:  pkgconfig(sndfile)
 BuildRequires:  zita-convolver-devel >= 3.1.0
 
 Requires:       hicolor-icon-theme
-Requires:       gstreamer1-plugins-good >= 1.12
+Requires:       dbus-common
+Requires:       gstreamer1-plugins-good >= 1.12.5
 #Requires:       ladspa-swh-plugins >= 0.4
 Requires:       lv2-calf-plugins >= 0.90.0
+Requires:       ladspa-calf-plugins
+Requires:       lv2-mdala-plugins
 
 Recommends:     zam-plugins
 Recommends:     lv2-zam-plugins
 Recommends:     ladspa-zam-plugins
-Recommends:     mda-lv2
 Recommends:     rubberband
 
 
@@ -72,9 +74,7 @@ appstream-util validate-relax --nonet %{buildroot}%{_datadir}/metainfo/com.githu
 %{_datadir}/glib-2.0/schemas/*
 %{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
 %{_datadir}/metainfo/com.github.wwmm.%{name}.appdata.xml
-%{_datadir}/help/C/%{name}/*
-%{_datadir}/help/pt_BR/%{name}/*
-%{_datadir}/help/ru/%{name}/*
+%{_datadir}/help/*/%{name}
 %{_datadir}/dbus-1/services/com.github.wwmm.%{name}.service
 %{_libdir}/gstreamer-1.0/libgst*.so
 
